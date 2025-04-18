@@ -1,8 +1,9 @@
 // pages/multiple.tsx
 import { MultiplePokemonForm } from '../components/MultiplePokemonForm';
 import { Box, Typography, Container } from '@mui/material';
+import { trpc } from '@/utils/trpc';
 
-export default function MultiplePokemonPage() {
+function MultiplePokemonPage() {
   return (
     <Container maxWidth="md">
       <Box my={4}>
@@ -14,3 +15,4 @@ export default function MultiplePokemonPage() {
     </Container>
   );
 }
+export default trpc.withTRPC(MultiplePokemonPage);
