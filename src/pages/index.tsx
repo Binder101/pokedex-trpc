@@ -1,4 +1,4 @@
-// pages/index.tsx
+
 import { SinglePokemonForm } from '../components/SinglePokemonForm';
 import { Box, Typography, Container, Button, Stack } from '@mui/material';
 import { trpc } from '@/utils/trpc';
@@ -23,14 +23,14 @@ function SinglePokemonPage() {
           alignItems={{ xs: 'stretch', sm: 'center' }}
           justifyContent="space-between"
           flexDirection={{ xs: 'column', sm: 'row' }}
-          gap={2} // spacing between heading and buttons on small screens
+          gap={2} // For responsive UI
           mb={3}
         >
           <Typography
             variant="h4"
             component="h1"
             gutterBottom
-            sx={{ mb: { xs: 2, sm: 0 } }} // margin below heading on mobile
+            sx={{ mb: { xs: 2, sm: 0 } }} // For responsive UI
           >
             Pokemon Lookup
           </Typography>
