@@ -1,4 +1,4 @@
-// components/PokemonRow.tsx
+
 import { FC } from 'react';
 import { Box, Typography, Chip, Avatar } from '@mui/material';
 

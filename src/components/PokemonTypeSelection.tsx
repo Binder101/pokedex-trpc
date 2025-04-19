@@ -1,4 +1,4 @@
-// components/PokemonTypeSelection.tsx
+
 import { FC } from 'react';
 import { FormControl, InputLabel, Select, MenuItem, SelectChangeEvent } from '@mui/material';
 

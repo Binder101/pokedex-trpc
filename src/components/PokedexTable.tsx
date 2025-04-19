@@ -1,4 +1,4 @@
-// components/PokedexTable.tsx
+
 import { FC, useState } from 'react';
 import { 
   Table, TableBody, TableCell, TableContainer, 

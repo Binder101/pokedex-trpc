@@ -1,4 +1,4 @@
-// components/SinglePokemonForm.tsx
+
 import { FC, useState } from 'react';
 import { Box, TextField, Button, CircularProgress,Typography } from '@mui/material';
 import { trpc } from '../utils/trpc';
