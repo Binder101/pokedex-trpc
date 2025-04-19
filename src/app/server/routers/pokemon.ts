@@ -1,13 +1,6 @@
 import { router, publicProcedure } from '../trpc';
 import { z } from 'zod';
 
-interface p {
-  id : number,
-  name : string,
-  types : string[],
-  sprite : string
-}
-
 export const pokemonRouter = router({
   getByName: publicProcedure
     .input(z.string())
