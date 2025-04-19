@@ -1,6 +1,13 @@
 import { router, publicProcedure } from '../trpc';
 import { z } from 'zod';
 
+interface p {
+  id : number,
+  name : string,
+  types : string[],
+  sprite : string
+}
+
 export const pokemonRouter = router({
   getByName: publicProcedure
     .input(z.string())
@@ -31,6 +38,6 @@ export const pokemonRouter = router({
     const pokemons = await ctx.prisma.pokemon.findMany({
       select: { types: true }
     });
-    return Array.from(new Set(pokemons.flatMap(p => p.types)));
+    return Array.from(new Set(pokemons.flatMap((p: { types: string[] }) => p.types)));
   })
 });
