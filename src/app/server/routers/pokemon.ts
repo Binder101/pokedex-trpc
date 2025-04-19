@@ -34,10 +34,12 @@ export const pokemonRouter = router({
       });
     }),
 
-  getAllTypes: publicProcedure.query(async ({ ctx }) => {
-    const pokemons = await ctx.prisma.pokemon.findMany({
-      select: { types: true }
-    });
-    return Array.from(new Set(pokemons.flatMap((p: { types: string[] }) => p.types)));
-  })
+    getAllTypes : publicProcedure
+    .output(z.array(z.string()))
+    .query(async ({ ctx }) => {
+      const pokemons = await ctx.prisma.pokemon.findMany({
+        select: { types: true }
+      });
+      return Array.from(new Set(pokemons.flatMap((p: { types: string[] }) => p.types)));
+    })
 });

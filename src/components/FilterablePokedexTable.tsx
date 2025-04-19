@@ -27,7 +27,7 @@ export const FilterablePokedexTable: FC = () => {
       <PokemonTypeSelection
         selectedType={selectedType}
         selectType={setSelectedType}
-        types={allTypes}
+        types={allTypes ?? []}
       />
       {pokemons && <PokedexTable pokemons={pokemons} />}
     </Box>
